@@ -19,3 +19,33 @@ create detailed guideline based on https://kobuki.readthedocs.io/en/release-1.0.
     colcon build
     ```
 
+4. Set udev rule for kobuki
+    ```bash
+    wget https://raw.githubusercontent.com/kobuki-base/kobuki_ftdi/devel/60-kobuki.rules
+    sudo cp 60-kobuki.rules /etc/udev/rules.d
+
+    sudo service udev reload
+    sudo service udev restart
+    ```
+
+5. Check connectivity
+    ```bash
+    source ./install/setup.bash
+    kobuki-version-info
+    ```
+
+    Ouput should be like,
+    ```bash
+    Version Info:
+    Hardware Version: 1.0.4
+    Firmware Version: 1.2.0
+    Software Version: 1.1.0
+    Unique Device ID: 97713968-842422349-1361404194
+    ```
+
+6. Kobuki Teleop keyboard
+
+    ```bash
+    source ./install/setup.bash
+    kobuki-simple-keyop
+    ```
