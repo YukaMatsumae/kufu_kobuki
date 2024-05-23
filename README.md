@@ -19,7 +19,7 @@ create detailed guideline based on https://kobuki.readthedocs.io/en/release-1.0.
     colcon build
     ```
 
-4. Set udev rule for kobuki
+4. Set udev rule for kobuki using following commands and unplug and replug the usb cable.
     ```bash
     wget https://raw.githubusercontent.com/kobuki-base/kobuki_ftdi/devel/60-kobuki.rules
     sudo cp 60-kobuki.rules /etc/udev/rules.d
