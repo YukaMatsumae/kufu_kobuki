@@ -11,9 +11,14 @@ This repository and the [dependencies repository](https://github.com/AIResearchL
     sudo apt install ros-humble-angles ros-humble-diagnostics ros-humble-joint-state-publisher ros-humble-ros-testing
     ```
 
-2. Optional Dependencies for using Kobuki_keyop [Issue #21](https://github.com/ros2/teleop_twist_keyboard/issues/21)
+2. Optional Dependencies for using kobuki_keyop [Issue #21](https://github.com/ros2/teleop_twist_keyboard/issues/21)
     ```bash
     sudo apt install xterm
+    ```
+
+3. Optional Dependencies for using kobuki_joyop 
+    ```bash
+    sudo apt install ros-humble-teleop-twist-joy ros-humble-joy
     ```
 
 3. Clone main repository and dependencies
@@ -65,10 +70,32 @@ kobuki-simple-keyop
 
 ## ROS usage
 
-### KeyOp control
+### Kobuki system start
 
-Run following commands in the workspace.
+Run following commands in the workspace to start the kobuki system.
+```bash
+source ./install/setup.bash
+ros2 launch kobuki_node kobuki_node-launch.py
+```
+
+Run following commands in the workspace to start the kobuki system as a composable node.
+```bash
+source ./install/setup.bash
+ros2 launch kobuki_node kobuki_node-composed-launch.py
+```
+
+### Kobuki KeyOp control
+
+Run following commands in the workspace to use kobuki keyboard control.
 ```bash
 source ./install/setup.bash
 ros2 launch kobuki_keyop kobuki_keyop.launch.py
+```
+
+### Kobuki Joystick control
+
+Run following commands in the workspace to use kobuki keyboard control.
+```bash
+source ./install/setup.bash
+ros2 launch kobuki_joyop kobuki_joy.launch.py
 ```
