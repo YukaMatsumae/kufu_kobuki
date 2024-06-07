@@ -86,13 +86,25 @@ ros2 launch kobuki_node kobuki_node-composed-launch.py
 
 ### Kobuki KeyOp control
 
+Run following commands in the workspace to start kobuki system.
+```bash
+source ./install/setup.bash
+ros2 launch kobuki_node kobuki_node-launch.py
+```
+
 Run following commands in the workspace to use kobuki keyboard control.
 ```bash
 source ./install/setup.bash
-ros2 launch kobuki_keyop kobuki_keyop.launch.py
+ros2 run kobuki_keyop kobuki_keyop_node
 ```
 
 ### Kobuki Joystick control
+
+Run following commands in the workspace to start kobuki system.
+```bash
+source ./install/setup.bash
+ros2 launch kobuki_node kobuki_node-launch.py
+```
 
 Run following commands in the workspace to use kobuki keyboard control.
 ```bash
