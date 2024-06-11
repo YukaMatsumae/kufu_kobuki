@@ -75,13 +75,13 @@ kobuki-simple-keyop
 Run following commands in the workspace to start the kobuki system.
 ```bash
 source ./install/setup.bash
-ros2 launch kobuki_node kobuki_node-launch.py
+ros2 launch kobuki_node kobuki_node.launch.py
 ```
 
 Run following commands in the workspace to start the kobuki system as a composable node.
 ```bash
 source ./install/setup.bash
-ros2 launch kobuki_node kobuki_node-composed-launch.py
+ros2 launch kobuki_node kobuki_node_composed.launch.py
 ```
 
 ### Kobuki KeyOp control
@@ -89,7 +89,7 @@ ros2 launch kobuki_node kobuki_node-composed-launch.py
 Run following commands in the workspace to start kobuki system.
 ```bash
 source ./install/setup.bash
-ros2 launch kobuki_node kobuki_node-launch.py
+ros2 launch kobuki_node kobuki_node.launch.py
 ```
 
 Run following commands in the workspace to use kobuki keyboard control.
@@ -103,7 +103,7 @@ ros2 run kobuki_keyop kobuki_keyop_node
 Run following commands in the workspace to start kobuki system.
 ```bash
 source ./install/setup.bash
-ros2 launch kobuki_node kobuki_node-launch.py
+ros2 launch kobuki_node kobuki_node.launch.py
 ```
 
 Run following commands in the workspace to use kobuki keyboard control.
