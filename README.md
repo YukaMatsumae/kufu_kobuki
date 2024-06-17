@@ -23,8 +23,8 @@ This repository and the [dependencies repository](https://github.com/AIResearchL
 
 3. Clone main repository and dependencies
     ```bash
-    git clone https://github.com/AIResearchLab/kobuki.git
-    git clone https://github.com/AIResearchLab/kobuki_dependencies.git
+    git clone --recurse-submodules https://github.com/AIResearchLab/kobuki.git
+    git clone --recurse-submodules https://github.com/AIResearchLab/kobuki_dependencies.git
     ```
 
 4. Build the system with following command. 
