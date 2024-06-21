@@ -1,8 +1,63 @@
 # Kobuki ROS2 package
 
-This repository and the [dependencies repository](https://github.com/AIResearchLab/kobuki_dependencies.git) focuses on merging all the public forks available on the original [Kobuki Base](https://github.com/kobuki-base) repositories and extending the work towards an complete ROS2 package for kobuki based turtlebot robots.
+This repository and the [dependencies repository](https://github.com/AIResearchLab/kobuki_dependencies.git) focuses on merging all the public forks available on the original [Kobuki Base](https://github.com/kobuki-base) repositories and extending the work towards an complete ROS2 package for kobuki based turtlebot robots. Additionally a Dockerfile for kobuki system has been provided that supports both ARM64 and AMD64 systems. 
 
-## Installation
+## Docker Usage
+
+### Docker Compose based use
+
+Add the following snippet under `services` to any compose.yaml file to add this container.
+
+```bash
+  kobuki:
+    image: ghcr.io/airesearchlab/kobuki:humble
+    command: ros2 launch kobuki kobuki.launch.py
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    volumes:
+      - /dev:/dev
+```
+
+### Setup for pulling container from ghcr.io and running
+
+Clone this reposiotory
+
+```bash
+git clone https://github.com/AIResearchLab/kobuki.git
+```
+
+Pull the Docker image and run Docker compose (No need to run `docker compose build`)
+```bash
+cd kobuki/docker
+docker compose pull
+```
+
+Start the docker container
+```bash
+docker compose up
+```
+
+### Setup for building the container on device running
+
+Clone this reposiotory
+
+```bash
+git clone https://github.com/AIResearchLab/kobuki.git
+```
+
+Build the Docker image
+```bash
+cd kobuki/docker
+docker compose -f compose-build.yaml build
+```
+
+Start the docker container
+```bash
+docker compose -f compose-build.yaml up
+```
+
+## Direct Installation
 
 
 1. Install the following binary dependencies
