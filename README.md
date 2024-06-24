@@ -1,6 +1,6 @@
 # Kobuki ROS2 package
 
-This repository and the [dependencies repository](https://github.com/AIResearchLab/kobuki_dependencies.git) focuses on merging all the public forks available on the original [Kobuki Base](https://github.com/kobuki-base) repositories and extending the work towards an complete ROS2 package for kobuki based turtlebot robots. Additionally a Dockerfile for kobuki system has been provided that supports both ARM64 and AMD64 systems. 
+This repository and the [dependencies repository](https://github.com/AIResearchLab/kobuki_dependencies.git) focuses on merging all the public forks available on the original [Kobuki Base](https://github.com/kobuki-base) repositories and extending the work towards an complete ROS2 package for kobuki based turtlebot robots. Additionally a Dockerfile and prebuilt containers for kobuki system has been provided that supports both ARM64 and AMD64 systems. 
 
 ## Docker Usage
 
@@ -27,14 +27,10 @@ Clone this reposiotory
 git clone https://github.com/AIResearchLab/kobuki.git
 ```
 
-Pull the Docker image and run Docker compose (No need to run `docker compose build`)
+Pull the Docker image and start compose (No need to run `docker compose build`)
 ```bash
 cd kobuki/docker
 docker compose pull
-```
-
-Start the docker container
-```bash
 docker compose up
 ```
 
@@ -46,14 +42,10 @@ Clone this reposiotory
 git clone https://github.com/AIResearchLab/kobuki.git
 ```
 
-Build the Docker image
+Build the Docker image and start compose
 ```bash
 cd kobuki/docker
 docker compose -f compose-build.yaml build
-```
-
-Start the docker container
-```bash
 docker compose -f compose-build.yaml up
 ```
 
