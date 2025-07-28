@@ -13,6 +13,4 @@
 [submodule "kufu_kobuki_ros"]
 	path = kufu_kobuki_ros
 	url = git@github.com:YukaMatsumae/kufu_kobuki_ros.git
-    branch = main
-[submodule "your/submodule/path"]
 	branch = main
