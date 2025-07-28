@@ -13,3 +13,6 @@
 [submodule "cmd_vel_mux"]
 	path = cmd_vel_mux
 	url = https://github.com/AIResearchLab/cmd_vel_mux.git
+[submodule "kufu_kobuki_ros"]
+	path = kufu_kobuki_ros
+	url = git@github.com:YukaMatsumae/kufu_kobuki_ros.git
